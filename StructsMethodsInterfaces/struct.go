@@ -1,6 +1,8 @@
 package StructsMethodsInterfaces
 
-import "math"
+import (
+	"math"
+)
 
 type Rectangle struct {
 	Width  float64
@@ -22,15 +24,25 @@ type Shape interface {
 
 }
 
-
-
-
-
 func (c Circle) Area() float64 {
 
 	return c.Radius * c.Radius * math.Pi
 
 }
+
+
+type Triangle struct{
+
+    Length float64
+}
+
+func (t Triangle) Area()float64{
+    return t.Length *3 
+
+}
+
+
+
 
 func Perimeter(recta Rectangle) float64 {
 
@@ -40,5 +52,13 @@ func Perimeter(recta Rectangle) float64 {
 }
 
 func Area(recta Rectangle) float64 {
+
 	return recta.Height * recta.Width
+
 }
+
+
+
+
+
+
