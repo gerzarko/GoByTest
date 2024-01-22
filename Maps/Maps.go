@@ -14,12 +14,14 @@ func (d Dictionary) Search(toSearch string)(string,error){
        }
 
     }
-    return "",errors.New("there is no key with that name")
+    return "",errors.New("could not find the word you were looking for")
 
 }
 
-func (d Dictionary) Add (key string,value string){
+func (d Dictionary) Add (key string,value string)error{
     d[key] = value
+    return nil
+
 
 }
 

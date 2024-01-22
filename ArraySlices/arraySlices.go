@@ -21,9 +21,22 @@ func SumAll(firstSlice []int, secondSlice []int) []int {
 
 }
 func SumAllTails(firstArray []int,secondArray[]int)[]int{
-    ultimoDelPrimero := firstArray[len(firstArray)-1]
+
+    retorno := []int{}
+
+    if len(firstArray) == 0 {
+        firstArray = append(firstArray, 0)
+    }
+
+    if len(secondArray) == 0 {
+        secondArray= append(secondArray, 0)
+    }
+
+    ultimoDelPrimero:= firstArray[len(firstArray) -1 ]
     ultimoSegundo := secondArray[len(secondArray) -1 ]
-    retorno := []int{ultimoDelPrimero,ultimoSegundo}
+
+    retorno = append(retorno,ultimoDelPrimero,ultimoSegundo )
+
     return retorno  
  
 }
