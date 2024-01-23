@@ -1,16 +1,20 @@
 package main
 
 import (
-	"bytes"
-	"fmt"
-	"main/Mocking"
+	// "bytes"
+ //    "main/Mocking"
+	// "fmt"
+    "main/Concurrency"
 )
 
 
 func main() {
 
 
-    buffer := &bytes.Buffer{}
-    Mocking.Countdown(buffer)
-    fmt.Println(buffer.String())
+    // buffer := &bytes.Buffer{}
+    // Mocking.Countdown(buffer)
+    // fmt.Println(buffer.String())
+    concurrency.ConcurrencyMe()
+    concurrency.WIthoutConc()
+
 }
